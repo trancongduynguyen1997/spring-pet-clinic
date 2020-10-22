@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/owner")
+@RequestMapping("/owners")
 @Controller
 public class OwnerController {
 
@@ -19,6 +19,6 @@ public class OwnerController {
     @GetMapping({"", "/", "/index"})
     public String ownerList(Model model) {
         model.addAttribute("owners", ownerService.findAll());
-        return "owner/index";
+        return "owners/index";
     }
 }
